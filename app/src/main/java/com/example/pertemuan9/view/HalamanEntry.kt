@@ -18,24 +18,20 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.pertemuan9.R
+import com.example.pertemuan9.uicontroller.DestinasiEntry
 import com.example.pertemuan9.uicontroller.DestinasiNavigasi
-import com.example.pertemuan9.uicontroller.SiswaTopAppBar
 import com.example.pertemuan9.viewmodel.DetailSiswa
 import com.example.pertemuan9.viewmodel.EntryViewModel
 import com.example.pertemuan9.viewmodel.PenyediaViewModel
 import com.example.pertemuan9.viewmodel.UIStateSiswa
 import kotlinx.coroutines.launch
-
-object DestinasiEntry: DestinasiNavigasi {
-    override val route = "item_entry"
-    override val titleRes = R.string.entry_siswa
-}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -144,8 +140,9 @@ fun FormInputSiswa(
             )
         }
         HorizontalDivider(
+            modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_medium)),
             thickness = dimensionResource(R.dimen.padding_small),
-            modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_medium))
+            color = Color.Blue
         )
     }
 }
