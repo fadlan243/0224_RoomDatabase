@@ -1,0 +1,8 @@
+package com.example.pertemuan9.uicontroller
+
+import com.example.pertemuan9.R
+
+
+object DestinasiEntry : DestinasiNavigasi {
+    override val route = "item_entry"
+}
